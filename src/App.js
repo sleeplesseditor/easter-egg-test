@@ -1,4 +1,5 @@
 import './App.css';
+import Snowfall from 'react-snowfall'
 
 function App() {
   const name = ['Christmas'];
@@ -6,7 +7,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {}
+        {name.includes('Christmas') ? (
+          <Snowfall
+            // Changes the snowflake color
+            color="white"
+            // Applied to the canvas element
+            // style={{ background: '#fff' }}
+            // Controls the number of snowflakes that are created (default 150)
+            snowflakeCount={700}
+        />
+        ) : null}
       </header>
     </div>
   );
